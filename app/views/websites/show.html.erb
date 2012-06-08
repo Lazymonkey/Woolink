@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @website.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @website.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @website.image_url %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <li><%= @website.link %></li>
+</p>
+
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>

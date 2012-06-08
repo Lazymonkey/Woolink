@@ -1,0 +1,24 @@
+<% if notice %>
+    <p id="notice><%= notice %></p>
+<% end %>
+<div class="hero-unit">
+<h1>Share your links with the world</h1>
+<p />
+<p>我们热爱互联网，我们爱链接，我们更爱分享。。。</p>
+<a class="btn primary large">Learn more &raquo;</a>
+<a class="btn primary large">Join us &raquo;</a>
+</div>
+<% @websites.each do |website| %>
+    <div class="content>
+        <div class="row">
+            <div class="view view-fifth">
+                <%= image_tag(website.image_url) %>
+                <div class="mask">
+                    <h2><%= website.title %></h2>
+                    <p><%= sanitize(website.description) %></p>
+                    <a href="<%= website.link %>" class="info">查看</a>
+                </div> <%# --- end mask--- %>
+            </div> <%# --- end view view-fifth --- %>
+        </div> <%# ---end row --- %>
+    </div> <%# --- end content --- %>
+<% end %>

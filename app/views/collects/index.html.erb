@@ -1,0 +1,21 @@
+<h1>Listing collects</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @collects.each do |collect| %>
+  <tr>
+    <td><%= link_to 'Show', collect %></td>
+    <td><%= link_to 'Edit', edit_collect_path(collect) %></td>
+    <td><%= link_to 'Destroy', collect, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Collect', new_collect_path %>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linkbook</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag    "home", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <style type="text/css">
+      body {
+      padding-top: 60px;
+      }
+  </style>
+</head>
+<body id="store" >
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="/">Linkbook</a>
+                <ul class="nav">
+                    <%#<li class="active"><a href="#">Home</a></li>%>
+                    <li><%= link_to "Home", home_index_path %></li>
+                    <li><a href="/websites">Websites</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <form class="navbar-search pull-left"action=="">
+                        <input class="search-query span4" placeholder="搜索"type="text" name="some_name" value="">
+                        <button type="submit" class="btn">Search</button>
+                    </form>
+                    <form>
+                        <input type="text" class="input-small" placeholder="Email">
+                        <input type="password" class="input-small" placeholder="Password">
+                        <input type="checkbox" value="option1" id="inlineCheckbox1"> Remember me
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </ul>
+                <p class="pull-right">Logged in as <a href="#">lazymonkey</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="main" >
+        <%= yield%>
+        <div class="row-fuild">
+            <hr>
+            <footer>
+            <p>&copy; <a href="<%= home_index_path %>">Linkbook</a> 2012</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

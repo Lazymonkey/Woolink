@@ -1,0 +1,17 @@
+<%= form_for(@collect) do |f| %>
+  <% if @collect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@collect.errors.count, "error") %> prohibited this collect from being saved:</h2>
+
+      <ul>
+      <% @collect.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

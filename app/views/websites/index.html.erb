@@ -1,0 +1,29 @@
+<h1>Listing websites</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Link</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @websites.each do |website| %>
+  <tr>
+    <td><%= website.title %></td>
+    <td><%= website.description %></td>
+    <td><%= website.image_url %></td>
+    <td><a href="<%= website.link %>"><%= website.link %></a></td>
+    <td><%= link_to 'Show', website %></td>
+    <td><%= link_to 'Edit', edit_website_path(website) %></td>
+    <td><%= link_to 'Destroy', website, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Website', new_website_path %>
