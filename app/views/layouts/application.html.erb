@@ -42,12 +42,15 @@
 
     <div id="main" >
         <%= yield%>
-        <div class="row-fuild">
-            <hr>
-            <footer>
-            <p>&copy; <a href="<%= home_index_path %>">Linkbook</a> 2012</p>
-            </footer>
+        <footer>
+        <div class="hero-unit">
+            <div align="center">
+                请使用火狐浏览器以获得最佳体验 ;)
+                <p>Thank you for use Linkbook to manage & share your links!</p>
+                Copyright &copy; 2012 <a href="<%= home_index_path %>">Linkbook</a>
+            </div>
         </div>
+        </footer>
     </div>
 </body>
 </html>
